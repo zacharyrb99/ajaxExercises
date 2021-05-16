@@ -3,7 +3,7 @@ console.log("Let's get this party started!");
 $searchText = $('#searchText');
 $searchButton = $('#search');
 $deleteButton = $('#delete');
-$gifHouse = $('#gitHouse');
+$gifHouse = $('#gifHouse');
 
 $searchButton.on('click', async function(){
     const searchValue = $searchText.val();
@@ -13,7 +13,7 @@ $searchButton.on('click', async function(){
     console.log(responseGIF);
     $searchText.val('');
 
-    gifURL = responseGIF.data.data.url;
+    gifURL = responseGIF.data.data.images.original.url;
     console.log(gifURL);
 
     let $GIF = $('<img>', {src: gifURL})
