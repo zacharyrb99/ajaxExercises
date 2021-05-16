@@ -39,6 +39,7 @@ function populateShows(shows) {
     );
     
     $showsList.append($show);
+    
   }
 }
 

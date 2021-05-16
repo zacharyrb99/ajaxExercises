@@ -14,25 +14,14 @@
     </form>
 
     <div class="row mt-3" id="shows-list">
-      
-    </div>
-
-    <section style="display: none" id="episodes-area">
-      <h2>Episodes</h2> 
-      <ul id="episodes-list">
-      </ul>
-    </section>  
-
-
-    <!--
-      <div class = 'modal fade' id = 'episodeModal' tabindex = '-1'>
+      <div class = 'modal fade' id = 'episodeModal'>
         <div class = 'modal-dialog modal-dialog-scrollable' >
           <div class = 'modal-content'>
             <div class = 'modal-header'>
               <h5>Episode List:</h5>
             </div>
 
-            <div class = 'modal-body'>
+            <div class = 'modal-body' id = 'episodeModalBody'>
 
             </div>
 
@@ -43,7 +32,14 @@
           </div>
         </div>
       </div>
-    -->
+    </div>
+
+    <section style="display: none" id="episodes-area">
+      <h2>Episodes</h2> 
+      <ul id="episodes-list">
+      </ul>
+    </section>  
+   
     <script src="http://unpkg.com/jquery"></script>
     <script src="http://unpkg.com/axios/dist/axios.js"></script>
     <script src="tvmaze.js"></script>
