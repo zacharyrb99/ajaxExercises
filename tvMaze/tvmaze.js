@@ -76,16 +76,17 @@ async function getEpisodes(id) {
 }
 
 async function populateEpisodes(episodes){
-  const $episodesModalBody = $('.modalBody')
-  //$episodesModalBody.empty();
+  const $episodesList = $('#episodes-list')
+  $episodesList.empty();
 
   for(let episode of episodes){
-    let $episodeBody = $(
-      `<p> ${episode.name} (Season:${episode.season} Episode:${episode.number})</p>`
+    let $episodeListItems = $(
+      `<li> ${episode.name} (Season: ${episode.season} Episode: ${episode.number})</li>`
     );
 
-    $episodesModalBody.append($episodeBody);
+    $episodesList.append($episodeListItems);
   }
+  $('#episodes-area').show();
 }
 
 $('#shows-list').on('click', '.get-episodes', async function episodeClick(e){
